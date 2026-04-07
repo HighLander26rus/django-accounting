@@ -1,0 +1,10 @@
+REVENUE_GUID = "revenue"
+COST_OF_SALES_GUID = "cost_of_sales"
+INVENTORY_DIFF_GUID = "inventory_diff"
+
+GUID_PREFIX_DEBT = "debt"
+GUID_PREFIX_CRED = "cred"
+GUID_PREFIX_MONEY = "money"
+GUID_PREFIX_TOVAR = "tovar"
+GUID_PREFIX_SKLAD = "sklad"
+GUID_PREFIX_EXPENSE = "expense"
