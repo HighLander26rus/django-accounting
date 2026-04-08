@@ -59,8 +59,20 @@
               qs = qs.filter(tovar_id=tovar_id)
           return qs
   ```
-    Не забудьте добавить URL-маршруты и шаблоны.
+- Для запрета удаления партии с ненулевым остатком в DeleteView переопределите delete():
+```python
+from django.contrib import messages
+from django.shortcuts import redirect
 
+def delete(self, request, *args, **kwargs):
+    part = self.get_object()
+    balance = get_balance(f"tovar_{part.tovar_id}_{part.id}")
+    if balance['quantity'] != 0:
+        messages.error(request, "Нельзя удалить партию с ненулевым остатком.")
+        return redirect('part_list')
+    return super().delete(request, *args, **kwargs)
+    Не забудьте добавить URL-маршруты и шаблоны.
+```
 ## Дополнительно (по желанию)
 
 - Добавить сортировку по дате партии, остатку или цене.
