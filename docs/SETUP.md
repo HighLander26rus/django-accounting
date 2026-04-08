@@ -52,7 +52,7 @@ GRANT ALL PRIVILEGES ON DATABASE django_accounting TO django_user;
 sudo -u postgres psql -l | grep django_accounting
 ```
 
-Или установите DBVeawer, pgAdmin, HeidiSQL или любое другое приложение для работы с базами данных, которое поддерживает PostGreSQL.
+Или установите DBeaver, pgAdmin, HeidiSQL или любое другое приложение для работы с базами данных, которое поддерживает PostGreSQL.
 
 ### 3. Клонирование репозитория
 
