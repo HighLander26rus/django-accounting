@@ -56,7 +56,7 @@ git push origin feature/task1-ваше_имя
     git add .
     git commit -m "Fix review comments"
     git push origin feature/task1-ваше_имя
-```
+  ```
   Коммит автоматически добавится в существующий PR.
 
 ## 7. Принятие PR и удаление ветки
@@ -68,7 +68,7 @@ git push origin feature/task1-ваше_имя
     git checkout main
     git pull origin main
     git branch -d feature/task1-ваше_имя   # удаляет локальную ветку
-```
+  ```
 
 ## 8. Получение изменений от других участников
 
